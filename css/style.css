@@ -2344,3 +2344,957 @@ img {
         scroll-behavior: auto !important;
     }
 }
+
+/* =========================================================
+   WAFAS PHOTO
+   MOBILE-FIRST LAYOUT OVERRIDE
+   =========================================================
+
+   NOTE:
+   - DESKTOP TETAP seperti CSS utama
+   - ANIMASI TIDAK DIUBAH
+   - HERO ANIMATION TETAP
+   - Fokus: ukuran, spacing, proporsi & layout HP
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET — 992px ke bawah
+   ========================================================= */
+
+@media (max-width:991px) {
+
+    /* -----------------------------------------------------
+       GLOBAL SCALE
+       ----------------------------------------------------- */
+
+    .section-pad {
+        padding: 82px 0;
+    }
+
+    .section-head {
+        margin-bottom: 34px;
+        gap: 22px;
+    }
+
+    .section-head h2,
+    .about h2,
+    .services h2,
+    .booking h2 {
+        font-size: clamp(44px, 7vw, 68px);
+    }
+
+
+    /* -----------------------------------------------------
+       NAVIGATION
+       ----------------------------------------------------- */
+
+    .navbar {
+        padding: 18px 0;
+    }
+
+    .navbar.scrolled {
+        padding: 12px 0;
+    }
+
+    .navbar-brand {
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       LAYOUT ONLY
+       ANIMATION TETAP SAMA
+       ----------------------------------------------------- */
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        padding-bottom: 9vh;
+    }
+
+    .hero h1 {
+        font-size: clamp(58px, 14vw, 105px);
+        max-width: 850px;
+    }
+
+    .hero p {
+        max-width: 430px;
+        font-size: .95rem;
+        margin: 24px 0;
+    }
+
+    .hero-buttons {
+        gap: 22px;
+    }
+
+    .hero-index {
+        right: 4%;
+        bottom: 7vh;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+       ----------------------------------------------------- */
+
+    .portrait-wrap {
+        max-width: 380px;
+    }
+
+    .lead-copy {
+        font-size: 17px;
+        margin: 28px 0 16px;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO
+       ----------------------------------------------------- */
+
+    .work {
+        overflow: hidden;
+    }
+
+    .work::before {
+        top: 75px;
+        font-size: clamp(90px, 15vw, 190px);
+    }
+
+    .work .container::before {
+        width: 300px;
+        height: 300px;
+        right: -160px;
+        top: 60px;
+    }
+
+    .work .container::after {
+        width: 140px;
+        height: 140px;
+        right: -55px;
+        top: 150px;
+    }
+
+    .filters {
+        gap: 7px;
+    }
+
+    .filters button {
+        padding: 8px 12px;
+        font-size: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO GRID TABLET
+       2 COLUMN
+       ----------------------------------------------------- */
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        /*
+           Jangan terlalu tinggi.
+           Desktop boleh besar,
+           tablet dibuat lebih compact.
+        */
+        grid-template-rows:
+            repeat(5,
+                clamp(235px, 31vw, 315px));
+
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    .project-card:nth-child(n) {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        aspect-ratio: auto;
+    }
+
+    .project-card {
+        border-radius: 15px;
+    }
+
+    .project-card:nth-child(2),
+    .project-card:nth-child(6),
+    .project-card:nth-child(10),
+    .project-card:nth-child(3),
+    .project-card:nth-child(7) {
+        border-radius: 17px;
+    }
+
+    .project-info {
+        left: 19px;
+        right: 19px;
+        bottom: 18px;
+    }
+
+    .project-info h3 {
+        font-size: clamp(23px, 3vw, 32px);
+    }
+
+    .project-card>b {
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .project-word {
+        font-size: clamp(38px, 5vw, 58px);
+        top: 15px;
+        left: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURED
+       ----------------------------------------------------- */
+
+    .feature {
+        min-height: auto;
+    }
+
+    .feature-photo img {
+        min-height: 52vh;
+        max-height: 650px;
+    }
+
+    .feature-copy {
+        padding: 65px 8%;
+    }
+
+    .feature-copy h2 {
+        font-size: clamp(52px, 8vw, 82px);
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICES
+       ----------------------------------------------------- */
+
+    .service {
+        grid-template-columns: 42px 1fr 25px;
+        gap: 18px;
+        padding: 25px 0;
+    }
+
+    .service h3 {
+        font-size: 23px;
+    }
+
+    .service p {
+        font-size: .92rem;
+    }
+
+
+    /* -----------------------------------------------------
+       BOOKING
+       ----------------------------------------------------- */
+
+    .booking::before {
+        font-size: clamp(130px, 24vw, 280px);
+    }
+
+    .form-grid {
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — 575px ke bawah
+   ========================================================= */
+
+@media (max-width:575px) {
+
+    /* -----------------------------------------------------
+       GLOBAL
+       ----------------------------------------------------- */
+
+    .section-pad {
+        padding: 64px 0;
+    }
+
+    .section-head {
+        margin-bottom: 28px;
+        gap: 18px;
+    }
+
+    .section-head h2,
+    .about h2,
+    .services h2,
+    .booking h2 {
+        font-size: 40px;
+        line-height: .96;
+        letter-spacing: -.04em;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: .22em;
+        margin-bottom: 17px;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVBAR
+       ----------------------------------------------------- */
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar.scrolled {
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        font-size: 11px;
+        letter-spacing: .15em;
+    }
+
+    .navbar-toggler {
+        padding: 6px;
+    }
+
+    .navbar-toggler span {
+        width: 21px;
+        margin: 5px 0;
+    }
+
+    .navbar-collapse {
+        padding: 16px;
+        margin: 10px -8px -10px;
+    }
+
+    .navbar-nav a {
+        font-size: 9px;
+        padding: 9px 10px;
+    }
+
+    .nav-cta {
+        margin-top: 5px;
+    }
+
+
+    /* =====================================================
+       HERO
+       LAYOUT SAJA
+       ANIMATION TETAP 100% SAMA
+       ===================================================== */
+
+    .hero {
+        height: 100svh;
+        min-height: 570px;
+    }
+
+    .hero-content {
+        padding-bottom: 72px;
+    }
+
+    .hero-kicker {
+        margin-bottom: 17px;
+        font-size: .58rem;
+        letter-spacing: .18em;
+    }
+
+    /*
+       Dulu 68px.
+       Ini dibuat lebih proporsional supaya HP tidak
+       terlihat seperti hanya berisi tulisan besar.
+    */
+    .hero h1 {
+        font-size: clamp(49px, 14.5vw, 64px);
+        line-height: .88;
+        letter-spacing: -.055em;
+        max-width: 100%;
+    }
+
+    .hero p {
+        max-width: 310px;
+        font-size: .84rem;
+        line-height: 1.65;
+        margin: 21px 0 23px;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+    }
+
+    .btn-main {
+        padding: 13px 16px;
+        font-size: 8px;
+        gap: 9px;
+    }
+
+    .btn-text {
+        font-size: .58rem;
+        gap: 7px;
+    }
+
+    .hero-index {
+        right: 15px;
+        bottom: 22px;
+        font-size: .52rem;
+        gap: 8px;
+    }
+
+    .hero-index-line {
+        height: 45px;
+    }
+
+    .hero-scroll {
+        left: 18px;
+        bottom: 22px;
+        font-size: .52rem;
+        gap: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+       ----------------------------------------------------- */
+
+    .portrait-wrap {
+        max-width: 330px;
+        padding: 0 16px 16px 0;
+    }
+
+    .portrait-frame {
+        inset: 16px 0 0 16px;
+    }
+
+    .portrait-note {
+        padding: 10px 12px;
+        font-size: 7px;
+    }
+
+    .portrait-note small {
+        font-size: 6px;
+    }
+
+    .lead-copy {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 24px 0 15px;
+    }
+
+    .muted-copy {
+        font-size: .9rem;
+        line-height: 1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO HEADER
+       ----------------------------------------------------- */
+
+    .work::before {
+        top: 70px;
+        left: -15px;
+        font-size: 92px;
+    }
+
+    .work .container::before {
+        width: 210px;
+        height: 210px;
+        right: -130px;
+        top: 105px;
+    }
+
+    .work .container::after {
+        width: 95px;
+        height: 95px;
+        right: -38px;
+        top: 165px;
+    }
+
+    .filters {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .filters button {
+        padding: 7px 10px;
+        font-size: 7.5px;
+        letter-spacing: .10em;
+    }
+
+
+    /* =====================================================
+       PORTFOLIO
+       MOBILE BENTO
+       ===================================================== */
+
+    .project-grid {
+
+        /*
+           1 COLUMN.
+           Tidak pakai fixed rows supaya tinggi mengikuti
+           aspect ratio card.
+        */
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+
+        gap: 14px;
+        margin-top: 30px;
+    }
+
+    .project-grid::before {
+        inset: -12px -7px;
+        border-radius: 19px;
+    }
+
+    .project-card:nth-child(n) {
+
+        grid-column: auto;
+        grid-row: auto;
+
+        width: 100%;
+        height: auto;
+
+        min-width: 0;
+        min-height: 0;
+
+        border-radius: 13px;
+
+        /*
+           Base ratio dibuat lebih compact.
+        */
+        aspect-ratio: 4/3;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE PORTFOLIO RHYTHM
+       Tidak semuanya portrait besar.
+       ----------------------------------------------------- */
+
+    /*
+       LANDSCAPE
+       Lebih pendek — cocok untuk HP
+    */
+    .project-card:nth-child(1),
+    .project-card:nth-child(4),
+    .project-card:nth-child(7),
+    .project-card:nth-child(10) {
+        aspect-ratio: 16/10;
+    }
+
+
+    /*
+       STANDARD
+    */
+    .project-card:nth-child(2),
+    .project-card:nth-child(5),
+    .project-card:nth-child(8) {
+        aspect-ratio: 4/3;
+    }
+
+
+    /*
+       CINEMATIC
+       Sedikit lebih tinggi tetapi tidak terlalu panjang
+    */
+    .project-card:nth-child(3),
+    .project-card:nth-child(6),
+    .project-card:nth-child(9) {
+        aspect-ratio: 5/6;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO CARD CONTENT
+       ----------------------------------------------------- */
+
+    .project-card {
+        border-radius: 13px;
+        box-shadow:
+            0 10px 28px rgba(0, 31, 34, .10);
+    }
+
+    .project-card:nth-child(2),
+    .project-card:nth-child(6),
+    .project-card:nth-child(10),
+    .project-card:nth-child(3),
+    .project-card:nth-child(7) {
+        border-radius: 15px;
+    }
+
+    .project-card img {
+        object-position: center;
+    }
+
+    .project-info {
+        left: 15px;
+        right: 15px;
+        bottom: 14px;
+    }
+
+    .project-info::before {
+        width: 24px;
+        margin-bottom: 8px;
+    }
+
+    .project-info span {
+        font-size: 6.5px;
+        letter-spacing: .16em;
+    }
+
+    .project-info h3 {
+        font-size: 23px;
+        line-height: .95;
+        margin: 5px 0;
+    }
+
+    .project-info small {
+        font-size: 7px;
+    }
+
+    .project-card>b {
+        right: 14px;
+        bottom: 14px;
+        font-size: 7px;
+    }
+
+    .project-word {
+        top: 13px;
+        left: 13px;
+        font-size: 39px;
+    }
+
+    /*
+       View Story disembunyikan seperti sebelumnya
+       agar HP tidak terlalu ramai.
+    */
+    .project-card::after {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURED
+       ----------------------------------------------------- */
+
+    .feature {
+        min-height: auto;
+    }
+
+    .feature-photo {
+        height: 58vh;
+        min-height: 360px;
+        max-height: 520px;
+    }
+
+    .feature-photo img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
+
+    .feature-copy {
+        padding: 55px 8%;
+    }
+
+    .feature-copy h2 {
+        font-size: 50px;
+        line-height: .92;
+        margin-bottom: 22px;
+    }
+
+    .feature-copy p:not(.eyebrow) {
+        font-size: .9rem;
+        line-height: 1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICES
+       ----------------------------------------------------- */
+
+    .service {
+        grid-template-columns: 30px 1fr 20px;
+        gap: 12px;
+        padding: 21px 0;
+    }
+
+    .service span {
+        font-size: 8px;
+    }
+
+    .service h3 {
+        font-size: 20px;
+        line-height: 1.1;
+    }
+
+    .service p {
+        font-size: .82rem;
+        line-height: 1.55;
+        margin-top: 4px;
+    }
+
+    .service>i {
+        font-size: .8rem;
+    }
+
+    .service:hover {
+        padding-left: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       BOOKING
+       ----------------------------------------------------- */
+
+    .booking::before {
+        right: -25px;
+        top: 40px;
+        font-size: 150px;
+    }
+
+    .booking-copy {
+        font-size: .88rem;
+        line-height: 1.7;
+    }
+
+    .form-grid {
+        gap: 17px;
+    }
+
+    label {
+        font-size: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: .9rem;
+        padding: 9px 0;
+    }
+
+    .submit-btn {
+        margin-top: 26px;
+        padding: 15px;
+        font-size: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    footer {
+        padding: 24px 0;
+        font-size: 9px;
+    }
+
+    footer strong {
+        letter-spacing: .16em;
+    }
+
+
+    /* =====================================================
+       PROJECT MODAL
+       ===================================================== */
+
+    .modal-inner {
+        padding: 72px 14px 45px;
+    }
+
+    .modal-close {
+        right: 15px;
+        top: 15px;
+        font-size: 21px;
+    }
+
+    .modal-top {
+        margin-bottom: 28px;
+    }
+
+    .modal-top h2 {
+        font-size: 42px;
+    }
+
+    .modal-top p {
+        font-size: .8rem;
+    }
+
+    .gallery-grid {
+        columns: 2 120px;
+        column-gap: 9px;
+    }
+
+    .gallery-item {
+        margin-bottom: 9px;
+    }
+
+    .modal-nav {
+        margin-top: 25px;
+        padding-top: 16px;
+    }
+
+    .modal-nav button {
+        font-size: 8px;
+    }
+
+
+    /* =====================================================
+       FULLSCREEN VIEWER
+       ===================================================== */
+
+    .viewer img {
+        max-width: 94vw;
+        max-height: 82vh;
+    }
+
+    .viewer button {
+        font-size: 22px;
+        padding: 14px;
+    }
+
+    .viewer button:first-child {
+        right: 5px;
+        top: 5px;
+    }
+
+    .viewer #viewerPrev {
+        left: 3px;
+    }
+
+    .viewer #viewerNext {
+        right: 3px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE — 380px ke bawah
+   ========================================================= */
+
+@media (max-width:380px) {
+
+    .section-pad {
+        padding: 58px 0;
+    }
+
+    .section-head h2,
+    .about h2,
+    .services h2,
+    .booking h2 {
+        font-size: 36px;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .hero-content {
+        padding-bottom: 65px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        max-width: 285px;
+        font-size: .8rem;
+        margin: 18px 0 20px;
+    }
+
+    .hero-kicker {
+        font-size: .52rem;
+    }
+
+    .btn-main {
+        padding: 12px 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO
+       ----------------------------------------------------- */
+
+    .project-grid {
+        gap: 12px;
+        margin-top: 26px;
+    }
+
+    .project-card:nth-child(n) {
+        border-radius: 11px;
+    }
+
+    .project-card:nth-child(2),
+    .project-card:nth-child(6),
+    .project-card:nth-child(10),
+    .project-card:nth-child(3),
+    .project-card:nth-child(7) {
+        border-radius: 13px;
+    }
+
+    .project-info {
+        left: 13px;
+        right: 13px;
+        bottom: 12px;
+    }
+
+    .project-info h3 {
+        font-size: 21px;
+    }
+
+    .project-word {
+        font-size: 35px;
+        top: 11px;
+        left: 11px;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURE
+       ----------------------------------------------------- */
+
+    .feature-photo {
+        height: 52vh;
+        min-height: 320px;
+    }
+
+    .feature-copy {
+        padding: 48px 7%;
+    }
+
+    .feature-copy h2 {
+        font-size: 44px;
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICES
+       ----------------------------------------------------- */
+
+    .service {
+        grid-template-columns: 26px 1fr 17px;
+        gap: 9px;
+        padding: 18px 0;
+    }
+
+    .service h3 {
+        font-size: 18px;
+    }
+
+    .service p {
+        font-size: .78rem;
+    }
+}

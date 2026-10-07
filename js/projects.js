@@ -20,7 +20,7 @@
 
 
 const projects = [
-        {
+    {
         id: 'event-documentation',
         category: 'Event',
         title: 'Tita with Our Hands',
@@ -46,7 +46,7 @@ const projects = [
         ].map(x => 'images/projects/event-documentation/' + x)
     },
 
-        {
+    {
         id: 'portrait-miko', // ID unik project
         category: 'Portrait', // Kategori untuk filter
         title: 'Portrait of Mikolas', // Judul yang tampil
@@ -108,12 +108,13 @@ const projects = [
             '2.jpg',
             '3.jpg',
             '4.jpg',
+            '5.jpg',
             '6.jpg',
             '7.jpg'
         ].map(x => 'images/projects/portrait-raisya/' + x)
     },
 
-        {
+    {
         id: 'portrait-akmal', // ID unik project
         category: 'Portrait', // Kategori untuk filter
         title: 'Portrait of Masyarbiya', // Judul yang tampil

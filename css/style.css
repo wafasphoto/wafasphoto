@@ -1056,7 +1056,7 @@ section h2 i,
     grid-template-columns: repeat(12, minmax(0, 1fr));
 
     grid-template-rows:
-        370px 310px 370px;
+        370px 310px 370px 370px;
 
     gap: 24px;
 

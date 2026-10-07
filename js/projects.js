@@ -42,7 +42,8 @@ const projects = [
             '8.jpg',
             '9.jpg',
             '10.jpg',
-            '11.jpg'
+            '11.jpg',
+            '12.jpg'
         ].map(x => 'images/projects/event-documentation/' + x)
     },
 
@@ -63,6 +64,7 @@ const projects = [
             '3.jpg',
             '4.jpg',
             '5.jpg',
+            '6.jpg'
         ].map(x => 'images/projects/portrait-miko/' + x)
     },
 
@@ -110,7 +112,8 @@ const projects = [
             '4.jpg',
             '5.jpg',
             '6.jpg',
-            '7.jpg'
+            '7.jpg',
+            '8.jpg'
         ].map(x => 'images/projects/portrait-raisya/' + x)
     },
 
